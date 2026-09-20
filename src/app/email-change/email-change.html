@@ -1,22 +1,16 @@
-<form>
+<form [formRoot]="form">
   <div class="form-field">
     <label>Email*</label>
     <input type="text" [formField]="form.email" />
-    @if (form.email().touched() && form.email().invalid() && form.email().errors()) {
-      @for (error of form.email().errors(); track error.message) {
-        <div class="error-message">{{ error.kind }} -> {{ error.message }}</div>
-      }
-    }
+    <error [state]="form.email()" />
+    <error [state]="form.email()" kind="email" />
   </div>
   <div class="form-field">
     <label>Confirm Email*</label>
     <input type="text" [formField]="form.confirmEmail" />
-    @if (
-      form.confirmEmail().touched() && form.confirmEmail().invalid() && form.confirmEmail().errors()
-    ) {
-      @for (error of form.confirmEmail().errors(); track error.message) {
-        <div class="error-message">{{ error.kind }} -> {{ error.message }}</div>
-      }
-    }
+    <error [state]="form.confirmEmail()" />
+    <error [state]="form.confirmEmail()" kind="email" />
+    <error [state]="form.confirmEmail()" kind="emailMismatch" />
   </div>
+  <button type="submit">Submit</button>
 </form>

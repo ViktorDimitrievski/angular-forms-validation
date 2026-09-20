@@ -1,6 +1,6 @@
 import { schema, type Schema, validateTree } from '@angular/forms/signals';
 
-export interface FieldsMatchOptions {
+export interface IFieldsMatchOptions {
   kind: string;
   message: string;
 }
@@ -15,7 +15,7 @@ export interface FieldsMatchOptions {
 export function fieldsMatchValidation<TField extends string, TConfirmationField extends string>(
   field: TField,
   confirmationField: TConfirmationField,
-  options: FieldsMatchOptions,
+  options: IFieldsMatchOptions,
 ): Schema<Record<TField | TConfirmationField, unknown>> {
   const matchingSchema = schema<Record<string, unknown>>((path) => {
     validateTree(path, (ctx) => {

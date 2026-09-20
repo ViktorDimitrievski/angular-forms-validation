@@ -2,11 +2,11 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
   {
-    path: 'reset-password',
+    path: 'password',
     loadComponent: () => import('./reset-password/reset-password').then((m) => m.ResetPassword),
   },
   {
-    path: 'email-change',
+    path: 'email',
     loadComponent: () => import('./email-change/email-change').then((m) => m.EmailChange),
   },
 ];
