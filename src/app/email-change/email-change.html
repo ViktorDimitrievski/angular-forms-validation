@@ -1,11 +1,11 @@
 <form [formRoot]="form">
-  <div class="form-field">
+  <div class="form-field" [errorClass]="form.email()">
     <label>Email*</label>
     <input type="text" [formField]="form.email" />
     <error [state]="form.email()" />
     <error [state]="form.email()" kind="email" />
   </div>
-  <div class="form-field">
+  <div class="form-field" [errorClass]="form.confirmEmail()">
     <label>Confirm Email*</label>
     <input type="text" [formField]="form.confirmEmail" />
     <error [state]="form.confirmEmail()" />

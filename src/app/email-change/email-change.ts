@@ -2,12 +2,13 @@ import { Component, signal } from '@angular/core';
 import { apply, email, form, FormField, FormRoot, required } from '@angular/forms/signals';
 import { fieldsMatchValidation } from '../core/helpers/custom-validators';
 import { ErrorComponent } from '../shared/components/error';
+import { ErrorClassDirective } from '../shared/directives/error.directive';
 interface MEmailChange {
   email: string;
   confirmEmail: string;
 }
 @Component({
-  imports: [FormRoot, FormField, ErrorComponent],
+  imports: [FormRoot, FormField, ErrorComponent, ErrorClassDirective],
   selector: 'app-email-change',
   styleUrl: './email-change.scss',
   templateUrl: './email-change.html',
