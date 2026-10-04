@@ -1,16 +1,16 @@
-<form [formRoot]="form">
+<form class="form" [formRoot]="form">
   <div class="form-field" [errorClass]="form.email()">
-    <label>Email*</label>
-    <input type="text" [formField]="form.email" />
+    <label class="form-field__label">Email*</label>
+    <input class="form-field__input" type="text" [formField]="form.email" />
     <error [state]="form.email()" />
     <error [state]="form.email()" kind="email" />
   </div>
   <div class="form-field" [errorClass]="form.confirmEmail()">
-    <label>Confirm Email*</label>
-    <input type="text" [formField]="form.confirmEmail" />
+    <label class="form-field__label">Confirm Email*</label>
+    <input class="form-field__input" type="text" [formField]="form.confirmEmail" />
     <error [state]="form.confirmEmail()" />
     <error [state]="form.confirmEmail()" kind="email" />
     <error [state]="form.confirmEmail()" kind="emailMismatch" />
   </div>
-  <button type="submit">Submit</button>
+  <button class="btn" type="submit">Submit</button>
 </form>

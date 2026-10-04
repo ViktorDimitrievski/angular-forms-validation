@@ -1,0 +1,18 @@
+app-root {
+  min-height: 100dvh;
+  padding: 24px;
+  box-sizing: border-box;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  place-items: center;
+  color: #1f2933;
+  font-family: 'Segoe UI Variable', 'Aptos', sans-serif;
+  //https://cssgradient.io/gradient-backgrounds/
+  //Near Moon
+  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+
+  @media (max-width: 480px) {
+    padding: 16px;
+  }
+}

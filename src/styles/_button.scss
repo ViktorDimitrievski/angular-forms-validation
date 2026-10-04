@@ -1,0 +1,38 @@
+.btn {
+  width: 100%;
+  min-height: 44px;
+  padding: 12px 16px;
+  font: inherit;
+  font-weight: 650;
+  font-size: 0.9375rem;
+  color: #ffffff;
+  background: #087f5b;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition:
+    background-color 160ms ease,
+    box-shadow 160ms ease,
+    transform 160ms ease;
+
+  &:hover {
+    background: #065f46;
+    box-shadow: 0 4px 12px rgb(8 127 91 / 25%);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgb(8 127 91 / 30%);
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+
+  &:disabled {
+    background: #b8c3c8;
+    color: #ffffff;
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+}

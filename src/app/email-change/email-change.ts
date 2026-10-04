@@ -10,7 +10,6 @@ interface MEmailChange {
 @Component({
   imports: [FormRoot, FormField, ErrorComponent, ErrorClassDirective],
   selector: 'app-email-change',
-  styleUrl: './email-change.scss',
   templateUrl: './email-change.html',
 })
 export class EmailChange {
